@@ -14,6 +14,22 @@ VersaGrip is a zero-electronic, battery-free assistive handle designed to help i
 Unlike active motorized devices, VersaGrip utilizes **passive mechanical logic** and **physics principles** to absorb high-frequency physical hand tremors in real time without microcontrollers or external power.
 
 ---
++-----------------------------------------------------------+
+|               LAYER 1: THE INPUT INTERFACE                |
+|           (High-Friction Voronoi Lattice Handle)          |
++-----------------------------------------------------------+
+|
+v
++-----------------------------------------------------------+
+|               LAYER 2: THE PROCESSING CORE                |
+|     (3-Axis Decoupled Gimbal + N52 Eddy Current Dampening)|
++-----------------------------------------------------------+
+|
+v
++-----------------------------------------------------------+
+|              LAYER 3: THE OUTPUT INTERFACE                |
+|          (Modular Universal Collar - TPU Lock)            |
++-----------------------------------------------------------+
 
 ## 📌 Table of Contents
 - [System Architecture](#-system-architecture)
@@ -82,3 +98,40 @@ Estimated prototyping cost for fabrication in a local FabLab/3D printing facilit
 ---
 
 ## 🛠️ Repository Structure
+├── CAD_Files/               # 3D Printable Assemblies (.STL, .OBJ, .GLB)
+│   ├── Chassis_Voronoi.stl
+│   ├── Gimbal_Rings.stl
+│   └── VersaGrip_Full_Assembly.glb
+├── Documentation/           # Technical Specs & Architecture Diagrams
+│   ├── System_Architecture.png
+│   └── Mechanical_Logic_Breakdown.pdf
+├── BOM/                     # Bill of Materials & Cost Analysis
+│   └── Estimated_Budget.csv
+├── LICENSE                  # MIT License
+└── README.md                # Project Overview & Setup Instructions
+---
+
+## 🖨️ Manufacturing & Assembly
+
+1. **Printing Chassis:** Print `Chassis_Voronoi.stl` using PLA+ at 0.2mm layer height with 20% infill.
+2. **Printing Core:** Print `Gimbal_Rings.stl` using SLA Resin for smooth bearing interfaces.
+3. **Core Assembly:** Press-fit the 6mm OD miniature ball bearings and embed N52 magnets into the designated pivot points on each gimbal ring.
+4. **Integration:** Press-fit the compiled 3-axis core inside the outer lattice handle.
+5. **Collar Attachment:** Secure the TPU universal collar onto the distal output end.
+
+---
+
+## 🔮 Future Roadmap
+
+- [ ] **Sensor Integration (IoT):** Integrate an ESP32 micro-controller and 6-axis IMU to track tremor metrics over time.
+- [ ] **Mobile Analytics App:** Develop a companion dashboard to display motor control improvement logs for physical therapists.
+- [ ] **Parametric CAD Generator:** Create a web UI to auto-generate customized handle sizes based on individual hand dimensions.
+
+---
+
+## 📄 License & Citation
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+**Team ForgeNova** (AssistX Submission)  
+*Designed for accessibility, mechanical efficiency, and open-source manufacturing.*
