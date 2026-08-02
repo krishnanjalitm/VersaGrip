@@ -1,137 +1,330 @@
-# VersaGrip
-VersaGrip is a zero-electronic, battery-free assistive handle designed to help individuals with motor control challenges (such as tremors or cerebral palsy) independently eat and brush their teeth.
-# VersaGrip: Passive 3-Axis Assistive Stabilization Hub
+# ✋ VersaGrip – Passive 3-Axis Assistive Stabilization Hub
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![CAD: Open-Source](https://img.shields.io/badge/CAD-Open--Source-blue.svg)](#)
-[![Status: Concept & Architecture](https://img.shields.io/badge/Status-Concept%20%26%20Architecture-brightgreen.svg)](#)
-[![Track: Assistive Tech](https://img.shields.io/badge/Track-Engineering%20Independence-orange.svg)](#)
+<p align="center">
 
-> **Team ForgeNova** | *AssistX Hackathon Submission*
+![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Status](https://img.shields.io/badge/Status-Prototype-brightgreen)
+![Hardware](https://img.shields.io/badge/Hardware-3D%20Printed-blue)
+![Track](https://img.shields.io/badge/Track-Assistive%20Technology-orange)
+![Open Source](https://img.shields.io/badge/Open%20Source-Yes-success)
 
-**VersaGrip** is a zero-electronic, battery-free assistive hardware architecture engineered to empower individuals—particularly children with motor control challenges such as Cerebral Palsy or Essential Tremor—to independently perform daily living tasks like eating and personal hygiene.
+</p>
 
-Unlike active motorized devices, VersaGrip utilizes **passive mechanical logic** and **physics principles** to absorb high-frequency physical hand tremors in real time without microcontrollers or external power.
-
----
-+-----------------------------------------------------------+
-|               LAYER 1: THE INPUT INTERFACE                |
-|           (High-Friction Voronoi Lattice Handle)          |
-+-----------------------------------------------------------+
-|
-v
-+-----------------------------------------------------------+
-|               LAYER 2: THE PROCESSING CORE                |
-|     (3-Axis Decoupled Gimbal + N52 Eddy Current Dampening)|
-+-----------------------------------------------------------+
-|
-v
-+-----------------------------------------------------------+
-|              LAYER 3: THE OUTPUT INTERFACE                |
-|          (Modular Universal Collar - TPU Lock)            |
-+-----------------------------------------------------------+
-
-## 📌 Table of Contents
-- [System Architecture](#-system-architecture)
-- [Key Engineering Features](#-key-engineering-features)
-- [Human-Computer Interaction (HCI)](#-human-computer-interaction-hci)
-- [Bill of Materials (BOM)](#-bill-of-materials-bom)
-- [Repository Structure](#-repository-structure)
-- [Manufacturing & Assembly](#-manufacturing--assembly)
-- [Future Roadmap](#-future-roadmap)
-- [License & Citation](#-license--citation)
+<p align="center">
+<b>Zero-Electronic • Battery-Free • Passive Mechanical Stabilization Device</b><br>
+Designed to improve independence for individuals with motor control challenges.
+</p>
 
 ---
 
-## 📐 System Architecture
+# 📖 Overview
 
-VersaGrip operates as a physical signal filter, translating erratic hand movement (input) into a steady, level utensil output through three functional layers:
+VersaGrip is a **passive 3-axis mechanical stabilization hub** that reduces hand tremors without using electronics, batteries, sensors, or software.
 
-### 1. Layer 1: Input Interface (Lattice Chassis)
-* **Geometry:** Cylindrical Voronoi lattice mesh.
-* **Material:** PLA+ (Fused Deposition Modeling / 3D Print).
-* **Function:** Provides a lightweight, high-friction surface area for users with weak grip strength while remaining hollow to house the inner stabilization core.
+The device is designed primarily for individuals with **Cerebral Palsy**, **Essential Tremor**, **Parkinsonian tremors**, and other motor-control disorders, enabling easier performance of daily activities such as:
 
-### 2. Layer 2: Processing Core (Triple-Axis Magnetic Gimbal)
-* **Mechanics:** Three concentric, de-coupled rings mounted on high-precision miniature steel ball bearings.
-  * **Pitch (X-Axis):** Corrects forward/backward tilting.
-  * **Roll (Y-Axis):** Corrects side-to-side rotation.
-  * **Yaw (Z-Axis):** Absorbs horizontal lateral shaking.
-* **Material:** SLA Resin for low-friction bearing mounting surfaces.
-* **Passive Magnetic Dampening:** N52 Neodymium magnets embedded at pivot points generate **Eddy Currents** (magnetic friction) during movement. This physically "brakes" rapid tremors while allowing slow, deliberate movements without resistance.
+- 🍽 Eating
+- 🪥 Brushing teeth
+- ✍ Writing (future attachment)
+- 🧴 Personal hygiene
 
-### 3. Layer 3: Output Interface (Universal Modular Hub)
-* **Mechanism:** Quick-release friction-lock mechanism.
-* **Material:** Flexible Polymer (TPU).
-* **Function:** Serves as a hardware "API," allowing users to snap in interchangeable everyday tools (spoons, forks, standard toothbrushes) without requiring extra tools.
+Instead of active electronic stabilization, VersaGrip relies entirely on **mechanical engineering** and **physics-based damping**.
 
 ---
 
-## ✨ Key Engineering Features
+# 🎯 Problem Statement
 
-* **Zero Electronics & Zero Power:** Completely waterproof, washable, maintenance-free, and battery-free.
-* **Open-Source Fabrication:** Optimized for rapid manufacturing using standard FabLab desktop 3D printers (FDM/SLA).
-* **Cross-Functional Modularity:** Supports eating and personal hygiene using a universal tool interface.
+Many assistive devices available today are:
 
----
+- Expensive
+- Battery dependent
+- Heavy
+- Difficult to maintain
+- Not easily customizable
 
-## 👁️ Human-Computer Interaction (HCI)
-
-VersaGrip features an integrated **Glow-Alignment Spirit Level Guide** embedded directly into the chassis. This provides real-time visual feedback, enabling users to self-train motor alignment and build long-term muscle memory.
-
----
-
-## 💰 Bill of Materials (BOM)
-
-Estimated prototyping cost for fabrication in a local FabLab/3D printing facility:
-
-| Item | Component / Description | Material / Spec | Qty | Est. Cost (INR) |
-| :--- | :--- | :--- | :---: | :---: |
-| 1 | Outer Lattice Handle | PLA+ Filament | 1 | ₹150 |
-| 2 | Triple-Axis Gimbal Rings | SLA Resin | 1 | ₹300 |
-| 3 | Pivot Bearings | Steel Ball Bearings (6mm OD) | 6 | ₹180 |
-| 4 | Magnetic Dampeners | Neodymium (N52) Magnets | 6 | ₹120 |
-| 5 | Output Collar Hub | TPU Flexible Polymer | 1 | ₹100 |
-| 6 | Visual Alignment Guide | Spirit Level Vial | 1 | ₹50 |
-| **Total** | | | | **~ ₹900** |
+VersaGrip provides a **low-cost**, **open-source**, **3D-printable**, and **maintenance-free** alternative.
 
 ---
 
-## 🛠️ Repository Structure
-├── CAD_Files/               # 3D Printable Assemblies (.STL, .OBJ, .GLB)
+# 🚀 Key Features
+
+- ✅ Zero Electronics
+- ✅ Battery-Free Operation
+- ✅ Passive Magnetic Tremor Dampening
+- ✅ 3-Axis Mechanical Gimbal
+- ✅ Universal Attachment System
+- ✅ Waterproof & Washable
+- ✅ Lightweight Design
+- ✅ Open Source CAD
+- ✅ Low Manufacturing Cost (~₹900)
+
+---
+
+# 🏗 System Architecture
+
+```
+          User Hand
+              │
+              ▼
+ ┌─────────────────────────┐
+ │ Layer 1                 │
+ │ Voronoi Lattice Handle  │
+ └─────────────────────────┘
+              │
+              ▼
+ ┌─────────────────────────┐
+ │ Layer 2                 │
+ │ Triple Axis Gimbal      │
+ │ + Magnetic Dampening    │
+ └─────────────────────────┘
+              │
+              ▼
+ ┌─────────────────────────┐
+ │ Layer 3                 │
+ │ Universal Tool Holder   │
+ └─────────────────────────┘
+              │
+              ▼
+        Spoon / Fork /
+       Toothbrush etc.
+```
+
+---
+
+# ⚙ Engineering Principle
+
+VersaGrip functions as a **physical signal filter**.
+
+Instead of electronically detecting tremors,
+
+```
+Hand Tremor
+      │
+      ▼
+Mechanical Gimbal
+      │
+      ▼
+Magnetic Eddy Current Damping
+      │
+      ▼
+Smooth Controlled Motion
+```
+
+The embedded **N52 Neodymium Magnets** create passive resistance through **eddy current damping**, reducing rapid unwanted movements while allowing intentional slow movements.
+
+---
+
+# 🧩 Component Breakdown
+
+| Layer | Component | Material | Purpose |
+|--------|-----------|----------|---------|
+| Layer 1 | Lattice Handle | PLA+ | Lightweight ergonomic grip |
+| Layer 2 | Triple Axis Gimbal | SLA Resin | Mechanical stabilization |
+| Layer 2 | Ball Bearings | Steel | Low-friction movement |
+| Layer 2 | N52 Magnets | Neodymium | Passive damping |
+| Layer 3 | Universal Hub | TPU | Attachment mechanism |
+| Feedback | Spirit Level | Acrylic | Visual alignment guidance |
+
+---
+
+# 💡 Human-Centered Design
+
+VersaGrip includes a built-in **Glow Spirit Level** that provides visual feedback during movement.
+
+Benefits include:
+
+- Better wrist alignment
+- Motor training
+- Improved hand-eye coordination
+- Long-term rehabilitation support
+
+---
+
+# 🧰 Bill of Materials
+
+| Component | Qty | Estimated Cost |
+|------------|----:|---------------:|
+| PLA Handle | 1 | ₹150 |
+| SLA Gimbal | 1 | ₹300 |
+| Steel Bearings | 6 | ₹180 |
+| N52 Magnets | 6 | ₹120 |
+| TPU Collar | 1 | ₹100 |
+| Spirit Level | 1 | ₹50 |
+
+### **Total Cost**
+
+**≈ ₹900**
+
+---
+
+# 📁 Repository Structure
+
+```
+VersaGrip/
+│
+├── CAD_Files/
 │   ├── Chassis_Voronoi.stl
 │   ├── Gimbal_Rings.stl
-│   └── VersaGrip_Full_Assembly.glb
-├── Documentation/           # Technical Specs & Architecture Diagrams
-│   ├── System_Architecture.png
-│   └── Mechanical_Logic_Breakdown.pdf
-├── BOM/                     # Bill of Materials & Cost Analysis
-│   └── Estimated_Budget.csv
-├── LICENSE                  # MIT License
-└── README.md                # Project Overview & Setup Instructions
----
-
-## 🖨️ Manufacturing & Assembly
-
-1. **Printing Chassis:** Print `Chassis_Voronoi.stl` using PLA+ at 0.2mm layer height with 20% infill.
-2. **Printing Core:** Print `Gimbal_Rings.stl` using SLA Resin for smooth bearing interfaces.
-3. **Core Assembly:** Press-fit the 6mm OD miniature ball bearings and embed N52 magnets into the designated pivot points on each gimbal ring.
-4. **Integration:** Press-fit the compiled 3-axis core inside the outer lattice handle.
-5. **Collar Attachment:** Secure the TPU universal collar onto the distal output end.
-
----
-
-## 🔮 Future Roadmap
-
-- [ ] **Sensor Integration (IoT):** Integrate an ESP32 micro-controller and 6-axis IMU to track tremor metrics over time.
-- [ ] **Mobile Analytics App:** Develop a companion dashboard to display motor control improvement logs for physical therapists.
-- [ ] **Parametric CAD Generator:** Create a web UI to auto-generate customized handle sizes based on individual hand dimensions.
+│   └── VersaGrip_Assembly.glb
+│
+├── Documentation/
+│   ├── Architecture.png
+│   ├── Mechanical_Logic.pdf
+│   └── Assembly_Guide.pdf
+│
+├── BOM/
+│   └── Budget.csv
+│
+├── Images/
+│   ├── Prototype.png
+│   ├── Exploded_View.png
+│   └── Architecture.png
+│
+├── LICENSE
+│
+└── README.md
+```
 
 ---
 
-## 📄 License & Citation
+# 🛠 Manufacturing Process
 
-Distributed under the MIT License. See `LICENSE` for more information.
+### Step 1
 
-**Team ForgeNova** (AssistX Submission)  
-*Designed for accessibility, mechanical efficiency, and open-source manufacturing.*
+Print the outer chassis using PLA+
+
+- Layer Height: 0.2 mm
+- Infill: 20%
+
+---
+
+### Step 2
+
+Print the gimbal rings using SLA resin.
+
+---
+
+### Step 3
+
+Insert:
+
+- Steel Bearings
+- N52 Magnets
+
+into the pivot locations.
+
+---
+
+### Step 4
+
+Assemble the three-axis gimbal.
+
+---
+
+### Step 5
+
+Fit the gimbal into the lattice handle.
+
+---
+
+### Step 6
+
+Attach the TPU universal tool holder.
+
+---
+
+# 🔬 Technologies Used
+
+- CAD Design
+- Mechanical Engineering
+- Passive Dynamics
+- Eddy Current Damping
+- 3D Printing
+- PLA+
+- SLA Resin
+- TPU
+- Neodymium Magnets
+
+---
+
+# 🎯 Applications
+
+- Assistive Healthcare
+- Rehabilitation
+- Occupational Therapy
+- Daily Living Assistance
+- Open-source Medical Hardware
+
+---
+
+# 🔮 Future Improvements
+
+- ESP32 + IMU Integration
+- Tremor Analytics Dashboard
+- Mobile Application
+- AI-Based Rehabilitation Insights
+- Custom Parametric CAD Generator
+- Additional Modular Attachments
+
+---
+
+# 📸 Project Images
+
+> Add screenshots here.
+
+```
+images/
+├── Prototype.png
+├── Assembly.png
+├── Exploded_View.png
+└── Working_Demo.gif
+```
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+See the `LICENSE` file for details.
+
+---
+
+# 👨‍💻 Team ForgeNova
+
+### AssistX Hackathon Submission
+
+**Project:** VersaGrip – Passive 3-Axis Assistive Stabilization Hub
+
+**Focus Areas**
+
+- Mechanical Engineering
+- Assistive Technology
+- Human-Centered Design
+- Open-Source Hardware
+- Affordable Healthcare Innovation
+
+---
+
+## ⭐ Support
+
+If you found this project interesting, consider giving it a **⭐ Star** on GitHub.
+
+It helps others discover the project and supports future development.
+
+---
+
+<p align="center">
+Made with ❤️ for Accessible & Affordable Healthcare
+</p>
